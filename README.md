@@ -4,6 +4,9 @@
 
 > 🍟 Easy to get value from vue instance via object paths.
 
+## Documentation
+https://qingwei-li.github.io/vueo
+
 ## Installation
 ```shell
 npm i vueo -S
