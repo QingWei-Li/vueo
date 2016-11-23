@@ -1,7 +1,7 @@
 {
   "name": "vueo",
   "version": "0.3.0",
-  "description": "",
+  "description": "Easy to get value from vue instance via object paths.",
   "main": "dist/vueo.js",
   "jsnext:main": "index.js",
   "scripts": {
