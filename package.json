@@ -8,6 +8,9 @@
     "build": "rollup -c && uglifyjs dist/vueo.js > dist/vueo.min.js",
     "test": "npm run build && eslint index.js __tests__ && jest"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "vue",
     "plugin",
