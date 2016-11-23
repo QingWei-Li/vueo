@@ -117,10 +117,10 @@ function install (Vue) {
   Vue.at = index;
   Vue.has = index$1;
   Vue.prototype.$at = function (path) {
-    return index(this, path)
+    return index(this._self, path)
   };
   Vue.prototype.$has = function (path) {
-    return index$1(this, path)
+    return index$1(this._self, path)
   };
 }
 

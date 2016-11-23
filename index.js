@@ -5,10 +5,10 @@ export default function install (Vue) {
   Vue.at = get
   Vue.has = has
   Vue.prototype.$at = function (path) {
-    return get(this, path)
+    return get(this._self, path)
   }
   Vue.prototype.$has = function (path) {
-    return has(this, path)
+    return has(this._self, path)
   }
 }
 
