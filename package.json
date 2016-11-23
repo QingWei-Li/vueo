@@ -1,0 +1,40 @@
+{
+  "name": "vueo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/vueo.js",
+  "jsnext:main": "index.js",
+  "scripts": {
+    "build": "rollup -c && uglifyjs dist/vueo.js > dist/vueo.min.js",
+    "test": "npm run build && eslint index.js __tests__ && jest"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "object",
+    "path",
+    "value"
+  ],
+  "author": "qingwei-li <cinwell.li@gmail.com> (https://github.com/QingWei-Li)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QingWei-Li/vueo.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "get-value": "^2.0.6",
+    "has-value": "^0.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.2",
+    "eslint-config-vue": "^2.0.1",
+    "eslint-plugin-vue": "^1.0.0",
+    "jest": "^17.0.3",
+    "rollup": "^0.36.3",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "uglify-js": "^2.7.4",
+    "vue": "^2.1.0"
+  }
+}

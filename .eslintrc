@@ -1,0 +1,7 @@
+{
+  "extends": "vue",
+  "globals": {
+    "test": true,
+    "expect": true
+  }
+}
