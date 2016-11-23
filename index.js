@@ -4,11 +4,15 @@ import has from 'has-value'
 export default function install (Vue) {
   Vue.at = get
   Vue.has = has
-  Vue.prototype.$at = function (path) {
-    return get(this._self, path)
+  Vue.prototype.$at = function (...args) {
+    return args.length === 1
+      ? get(this._self, args[0])
+      : get.apply(this, args)
   }
-  Vue.prototype.$has = function (path) {
-    return has(this._self, path)
+  Vue.prototype.$has = function (...args) {
+    return args.length === 1
+      ? has(this._self, args[0])
+      : has.apply(this, args)
   }
 }
 

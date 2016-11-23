@@ -116,11 +116,21 @@ var index$1 = function(obj, prop, noZero) {
 function install (Vue) {
   Vue.at = index;
   Vue.has = index$1;
-  Vue.prototype.$at = function (path) {
-    return index(this._self, path)
+  Vue.prototype.$at = function () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    return args.length === 1
+      ? index(this._self, args[0])
+      : index.apply(this, args)
   };
-  Vue.prototype.$has = function (path) {
-    return index$1(this._self, path)
+  Vue.prototype.$has = function () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    return args.length === 1
+      ? index$1(this._self, args[0])
+      : index$1.apply(this, args)
   };
 }
 

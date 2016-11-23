@@ -19,10 +19,14 @@ test('`at` is work', () => {
   expect(vm.$at('a.b.c.0.d')).toBe(1)
   expect(vm.$at('a.b.c.0.e.f')).toBe('g')
   expect(vm.$at('a.b.c.1')).toBe(undefined)
+
+  expect(vm.$at(vm.a, 'b.c[0].d'), 1)
 })
 
 test('`has` is work', () => {
   expect(vm.$has('a.b.c.0.d')).toBe(true)
   expect(vm.$has('a.b.c.0.e.f')).toBe(true)
   expect(vm.$has('a.b.c.1')).toBe(false)
+
+  expect(vm.$has(vm.a, 'b.c.0.e.f')).toBe(true)
 })

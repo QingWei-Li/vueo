@@ -40,11 +40,19 @@ new Vue({
     this.$at('a.0.key') // 'value'
     this.$at('a.1.key') // undefined
 
+    this.$at(this.a, '0.key') // 'value'
+
     this.$has('b') // true
     this.$has('a.1') // false
   }
 })
 ```
+
+## API
+- vm#$at(path)
+- vm#$at(obj, path)
+- vm#$has(path)
+- vm#$has(obj, path)
 
 ## Read more
 - https://github.com/jonschlinkert/get-value
