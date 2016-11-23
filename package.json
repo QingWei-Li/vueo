@@ -9,7 +9,8 @@
     "test": "npm run build && eslint index.js __tests__ && jest"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.js"
   ],
   "keywords": [
     "vue",
