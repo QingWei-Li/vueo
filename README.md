@@ -24,8 +24,8 @@ new Vue({
   created () {
     this.$has('a.b.0') // true
     this.$has('a.b.1') // false
-    this.$at('a.b[0].c') // 1
-    this.$at('a.b[1].c') // undefined
+    this.$at('a.b.0.c') // 1
+    this.$at('a.b.1.c') // undefined
   }
 })
 ```
