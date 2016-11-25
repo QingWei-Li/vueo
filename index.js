@@ -16,6 +16,6 @@ export default function install (Vue) {
   }
 }
 
-if (typeof window !== undefined && window.Vue) {
+if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(install)
 }
