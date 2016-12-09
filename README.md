@@ -33,6 +33,12 @@ new Vue({
 })
 ```
 
+## API
+- vm#$at(path)
+- vm#$at(obj, path)
+- vm#$has(path)
+- vm#$has(obj, path)
+
 ## Read more
 - https://github.com/jonschlinkert/get-value
 - https://github.com/jonschlinkert/has-value
